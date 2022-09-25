@@ -1,0 +1,44 @@
+FONTS LINK
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Jost:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+FONT-FAMILY
+Body - font-family: 'Inter', sans-serif; weight - 500
+Heading - font-family: 'Oxanium', cursive; weight - 700
+Text-logo - font-family: 'Jost', sans-serif; weight - 700 or 900
+
+FONT-SIZE
+Headline1 - 2.5rem/40px
+Headline2 - 2rem/32px
+Headline Small - 1.5rem/24px
+Body and button text - 1rem/16px
+====================
+COLOR THEMES
+
+LIGHT MODE 
+--bodyText: '#222121'
+--bodyBg: '#ccccccc'
+--containerBg: '#fff'
+--accent: '#0769db'
+--accentHover: '#3694FF'
+--btnColor: '#fff'
+--twitter: '#2380EE'
+--google: '#F62626'
+--github: '#3B3838'
+--apple: '#000000'
+--placeholderText: '#222121'
+
+LIGHT MODE 
+--bodyText: '#fff'
+--bodyBg: '#cccccc'
+--containerBg: '#222121'
+--accent: '#0769db'
+--accentHover: '#3694FF'
+--btnColor: '#fff'
+--twitter: '#2380EE'
+--google: '#F62626'
+--github: '#fff'
+--apple: '#fff'
+--placeholderText: '#fff'
+(github and apple will have the accent color as border color)
