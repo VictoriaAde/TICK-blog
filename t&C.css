@@ -1,0 +1,77 @@
+:root,
+:root.light {
+  --bodyText: "#222121";
+  --bodyBg: "#ccccccc";
+  --containerBg: "#fff";
+  --accent: "#0769db";
+  --accentHover: "#3694;FF";
+  --btnColor: "#fff";
+  --twitter: "#2380EE";
+  --google: "#F62626";
+  --github: "#3B3838";
+  --apple: "#000000";
+  --placeholderText: "#222121";
+  --bodyText: "#fff";
+  --bodyBg: "#cccccc";
+  --containerBg: "#222121";
+  --accent: "#0769db";
+  --accentHover: "#3694FF";
+  --btnColor: "#fff";
+  --twitter: "#2380EE";
+  --google: "#F62626";
+  --github: "#fff";
+  --apple: "#fff";
+  --placeholderText: "#fff";
+}
+
+body {
+  background: var(--bodyBg);
+  color: var(--bodyText);
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  padding: 8em 0em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: "Oxanium", cursive;
+  color: var(--bodyText);
+  font-weight: 700;
+  text-align: start;
+}
+
+h2 {
+  color: var(--bodyText);
+  font-size: 2rem;
+  font-family: "Oxanium", cursive;
+  font-weight: 700;
+}
+
+.container {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 980px;
+  counter-reset: counter-name;
+}
+
+.counter::before {
+  counter-increment: counter-name;
+  content: counter(counter-name) ". ";
+}
+
+@media (min-width: 700px) {
+  h1 {
+    text-align: center;
+  }
+
+  body {
+    background-color: #ccc;
+  }
+
+  .container {
+    width: 60%;
+    padding: 2em 4em;
+  }
+}
