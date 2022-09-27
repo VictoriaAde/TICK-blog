@@ -13,10 +13,28 @@
 	--placeholderText: #222121;
 }
 
-* {
+*,
+::before,
+::after,
+li {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+/* utilities */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.icon {
+	width: 22%;
+	aspect-ratio: 1/1;
+}
+
+body {
+	font-family: "Inter", sans-serif;
 }
 
 header {
@@ -112,11 +130,134 @@ header a {
 .menu_hamburger.open span:nth-child(2) {
 	opacity: 0;
 	left: -60px;
+
 }
 .menu_hamburger.open span:nth-child(3) {
 	top: 8px;
 	transform: rotate(-135deg);
 }
+
+/* main section */
+.container {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--containerBg);
+}
+
+.left-aside-container,
+.right-aside-container {
+	display: none;
+}
+
+.article-nav {
+	display: flex;
+	padding: 0.2rem ;
+}
+
+.article-nav a {
+	padding: 0.5rem 0.75rem;
+	font-size: 1.125rem;
+}
+
+.article-nav__active {
+	font-weight: 900;
+}
+
+article {
+	color: var(--bodyText);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	row-gap: 0.5rem;
+	padding: 1rem;
+	border: 1px solid var(--bodyText);
+	margin-bottom: 0.4rem;
+}
+
+.author-details {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.article__left-side {
+	width: 14%;
+}
+
+.article-img {
+	width: 100%;
+	border-radius: 80px;
+	object-fit: cover;
+	aspect-ratio: 1/1;
+	border: 2px solid var(--accentHover);
+}
+
+.article__author-name-date {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+
+.author-name,  .article-tags {
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+.date {
+	font-size: 0.75rem;
+}
+
+.article-title {
+	font-size: 1.25rem;
+	font-weight: 500;
+	margin-bottom: 0.2rem;
+}
+
+.article-heading {
+	font-weight: 700;
+	font-size: 1.25rem;
+	margin-bottom: 0.25rem;
+}
+
+.article-tags {
+	display: flex;
+	gap: 0.5rem;
+	color: rgba(var(--bodyText), 0.05);
+}
+
+.article-engagement, .left__article-engagement, .right__article-engagement {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.875rem;
+}
+
+.article-engagement {
+	justify-content: flex-start;
+}
+
+
+.left__article-engagement a {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	font-weight: normal;
+}
+
+.desktop-engagement-details {
+	display: none;
+}
+
+.right__article-engagement {
+	justify-content: flex-end;
+}
+
+.left__article-engagement a:nth-child(2) {
+	margin-left: -2rem;
+}
+
+
+
 
 /* media queries */
 @media screen and (min-width: 1000px) {
