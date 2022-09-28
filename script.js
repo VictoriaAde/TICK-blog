@@ -7,3 +7,11 @@ menuHamburger.addEventListener("click", (e) => {
   let mobileNav = document.querySelector(".mobile_nav");
   mobileNav.classList.toggle("showMobileNav");
 });
+
+// let a = 0
+// let b = 0
+// while (a < 3) {
+//   a++;
+//   b += a;
+//   console.log(b);
+// }
