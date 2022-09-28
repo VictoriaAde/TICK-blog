@@ -59,13 +59,18 @@ input[type=text] {
    width: 100%;
   padding: 10px;
   box-sizing: border-box;
-  margin: 5px 0 ;
+  margin: 10px 0 ;
   background-color: white;
   border: solid black 1px;
   border-radius: 4px;
   font-size: 18npx;
   
 }
+label [for=display name] {
+  margin-
+  
+}
+
 button{
 color: white;
 box-sizing: border-box;
