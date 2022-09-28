@@ -28,10 +28,9 @@ header li {
 header a {
   text-decoration: none;
 }
-.logo_heading {
-  background-color: var(--apple);
-  color: var(--btnColor);
-  border-radius: 3px;
+.logo {
+  margin: 0.8rem 0 0 0.8rem;
+  width: 33px;
 }
 .desktop_menu {
   display: none;
@@ -39,7 +38,6 @@ header a {
 .mobile_menu {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
 }
 .mobile_nav {
   position: absolute;
@@ -73,11 +71,12 @@ header a {
 /* hamburger button */
 .menu_hamburger {
   width: 30px;
-  height: 17px;
+  /* height: 17px; */
   position: relative;
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
   cursor: pointer;
+  margin: 1rem;
 }
 .menu_hamburger span {
   display: block;
@@ -113,13 +112,29 @@ header a {
   transform: rotate(-135deg);
 }
 
+.footer {
+  background-color: var(--twitter);
+  color: var(--containerBg);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 6rem;
+}
+.footer p {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin: 2rem auto;
+  font-size: 1rem;
+}
 /* media queries */
 @media screen and (min-width: 1000px) {
   header {
     font-family: "Oxanium", cursive;
     font-size: 1rem;
   }
-
+  .logo {
+    margin: 0;
+    width: 50px;
+  }
   .desktop_menu {
     display: flex;
     justify-content: space-between;
@@ -165,6 +180,10 @@ header a {
   }
   .mobile_menu {
     display: none;
+  }
+
+  .footer p {
+    font-size: 1.25rem;
   }
 }
 @media screen and (min-width: 1140px) {
