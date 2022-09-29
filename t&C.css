@@ -1,31 +1,26 @@
-:root,
-:root.light {
-  --bodyText: "#222121";
-  --bodyBg: "#ccccccc";
-  --containerBg: "#fff";
-  --accent: "#0769db";
-  --accentHover: "#3694;FF";
-  --btnColor: "#fff";
-  --twitter: "#2380EE";
-  --google: "#F62626";
-  --github: "#3B3838";
-  --apple: "#000000";
-  --placeholderText: "#222121";
-  --bodyText: "#fff";
-  --bodyBg: "#cccccc";
-  --containerBg: "#222121";
-  --accent: "#0769db";
-  --accentHover: "#3694FF";
-  --btnColor: "#fff";
-  --twitter: "#2380EE";
-  --google: "#F62626";
-  --github: "#fff";
-  --apple: "#fff";
-  --placeholderText: "#fff";
+:root {
+  /* LIGHT MODE  */
+  --bodyText: #222121;
+  --bodyBg: #cccccc;
+  --containerBg: #fff;
+  --accent: #0769db;
+  --accentHover: #3694ff;
+  --btnColor: #fff;
+  --twitter: #2380ee;
+  --google: #f62626;
+  --github: #3b3838;
+  --apple: #000000;
+  --placeholderText: #222121;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background: var(--bodyBg);
+  /* background: var(--bodyBg); */
   color: var(--bodyText);
   font-size: 1rem;
   font-family: "Inter", sans-serif;
@@ -39,6 +34,7 @@ h1 {
   color: var(--bodyText);
   font-weight: 700;
   text-align: start;
+  
 }
 
 h2 {
@@ -46,6 +42,7 @@ h2 {
   font-size: 2rem;
   font-family: "Oxanium", cursive;
   font-weight: 700;
+  margin: 1em 0;
 }
 
 .container {
