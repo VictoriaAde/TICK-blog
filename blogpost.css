@@ -1,0 +1,120 @@
+:root {
+  /* LIGHT MODE  */
+  --bodyText: #222121;
+  --bodyBg: #cccccc;
+  --containerBg: #fff;
+  --accent: #0769db;
+  --accentHover: #3694ff;
+  --btnColor: #fff;
+  --twitter: #2380ee;
+  --google: #f62626;
+  --github: #3b3838;
+  --apple: #000000;
+  --placeholderText: #222121;
+  --bgGray: #f1f1f1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.blog_desktop {
+  background-color: var(--bgGray);
+  display: none;
+}
+.blog_mobile {
+  background-color: var(--containerBg);
+  font-family: "Inter", sans-serif;
+  display: block;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+.profile h4 {
+  font-weight: 500;
+  line-height: 19px;
+  color: var(--bodyText);
+  font-size: 1rem;
+}
+.profile span {
+  line-height: 19px;
+  color: rgba(34, 33, 33, 0.7);
+  font-size: 1rem;
+}
+.profile img {
+  margin-right: 1rem;
+}
+.mobile_article {
+  color: var(--bodyText);
+  margin: 1rem;
+}
+.mobile_article h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0 2rem;
+}
+.mobile_article p {
+  margin-bottom: 1.3rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 19px;
+}
+.mobile_article div {
+  background-color: var(--github);
+  width: 280px;
+  height: 250px;
+  margin: 1rem auto;
+  color: var(--btnColor);
+}
+.blog_comments {
+  border-top: 1px solid rgba(0, 0, 0, 0.31);
+  margin: 3rem 0 2rem;
+}
+
+.blog_comment__heading {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 29px;
+  color: var(--bodyText);
+  margin: 2rem 1rem 0;
+}
+.comment__subcribe_btn {
+  color: var(--bodyText);
+  background: var(--containerBg);
+  border: 1px solid var(--btnColor);
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  padding: 1rem 2.625rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+.comment__subcribe_btn:hover {
+  background-color: rgb(246, 248, 246);
+}
+.comments {
+  margin: 1rem;
+}
+.comment {
+  display: flex;
+}
+.input_comment {
+  padding: 1.125rem;
+  background: #ffffff;
+  border: 0.39px solid rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+}
+.input_comment:focus {
+  outline: none;
+}
+/* .comment .commenter {
+} */
+@media screen and (min-width: 768px) {
+  .blog_mobile {
+    display: none;
+  }
+  .blog_desktop {
+    background-color: var(--bgGray);
+    display: block;
+  }
+}

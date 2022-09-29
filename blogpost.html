@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONTS LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Jost:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="blogpost.css" />
+    <title>Blogpost</title>
+  </head>
+  <body>
+    <main class="blog_mobile">
+      <div class="profile">
+        <img
+          src="./Images/manwithfacecap.svg"
+          alt="man with a face cap facing backwards"
+        />
+        <div>
+          <h4>Adam Smith</h4>
+          <span>Posted sep 5</span>
+        </div>
+      </div>
+      <article class="mobile_article">
+        <h2>How to use 1Password to share local secrets</h2>
+        <p>
+          # devops # tutorial # javascript # productivity Author's Note: All the
+          plain-text secret values shown in this tutorial are fictional. Don't
+          try to use them to hack my things, btecause these resources do not
+          exist.
+        </p>
+        <p>
+          1Password is an excellent password manager, and recently I began
+          exploring the value it can provide for secrets management, and boy is
+          it easy! If your team is using 1Password, you can use your vaults to
+          share secrets and pass them to your projects! Below is a tutorial I've
+          documented as I tested this process myself.
+        </p>
+        <p>Prerequisites In order to follow this tutorial, you'll need:</p>
+        <p>
+          A 1Password cloud subscription. If you're using the legacy version of
+          1Password where you self-host your vaults, this guide likely won't
+          work. The 1Password CLI. You can find the installation docs here.
+          <br />
+          Optional: Create a vault <br />
+          While this step is optional to complete the tutorial, it's a good
+          practice to have your secrets and credentials organized in a way that
+          segregates access. For this example, let's pretend our project is the
+          following:
+        </p>
+
+        <p>
+          JavaScript based SaaS Application <br />
+          Engineering Team: <br />
+          1 Principal Engineer <br />
+          1 Senior-level Engineer <br />
+          1 Junior-level Engineer <br />
+          Two Environments <br />
+          Non-Prod: Everyone has access <br />
+          Production: Only Principal and Senior <br />
+          Given this context, we'd want our Junior Engineer to be able to
+          view/add/edit non-production secrets, but not production ones. Let's
+          start by first creating a vault which is accessible by all engineers
+          and call it NewApp Non-Prod:
+        </p>
+
+        <div>Image</div>
+
+        <p>
+          Add secrets to vault <br />
+          Next, let's populate a few different credentials in this vault. For
+          this tutorial, I'm going to keep things simple and create two
+          different items. For our first item, let's create NewApp (Local). This
+          is where I would put shared secrets that are owned by the application
+          itself. In this example, I've defined a few items like URL, admin
+          password, postgres connection string, token salt, and JWT Secret:
+        </p>
+
+        <p>
+          Next let's add a second item to our vault for a third-party
+          integration. For this example, we'll use the service Twilio and define
+          our test Account SID and Auth Token which is used by the application
+          at startup: Image description
+        </p>
+        <p>
+          Create a .env-template file <br />
+          Within your project, create a new file called .env-template, which
+          we'll use as a template for creating a .env file used by the
+          application at runtime. Let's scaffold our template by mapping out the
+          environment variables our application requires:
+        </p>
+
+        <div>Image</div>
+      </article>
+
+      <section class="blog_comments">
+        <h2 class="blog_comment__heading">
+          Top Comments (2)
+          <img
+            src="./Images/commentheadingarrow.svg"
+            alt="triangle arrow top and bottom"
+          />
+        </h2>
+        <button class="comment__subcribe_btn">Subscribe</button>
+        <div class="comments">
+          <div>
+            <span class="commnenter">Tick</span>
+            <input
+              class="input_comment"
+              type="text"
+              name="comment"
+              id="comment"
+              placeholder="Add to the discussion"
+            />
+          </div>
+          <div class="comment">
+            <span class="commenter"
+              ><img src="./Images/shakur.svg" alt=""
+            /></span>
+
+            <div>
+              <span>Shakur Rabiu</span>
+              <span>Sep 5</span>
+              <p>Thanks Adam Smith !!!!!!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <main class="blog_desktop">
+      <section class="profile_sidebar"></section>
+      <section class="blog_post"></section>
+      <section class="icons_side"></section>
+    </main>
+  </body>
+</html>
