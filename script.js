@@ -8,10 +8,15 @@ menuHamburger.addEventListener("click", (e) => {
   mobileNav.classList.toggle("showMobileNav");
 });
 
-// let a = 0
-// let b = 0
-// while (a < 3) {
-//   a++;
-//   b += a;
-//   console.log(b);
-// }
+
+const setTheme = (theme) => {
+  document.documentElement.className = theme;
+  localStorage.setItem("theme", theme);
+};
+
+const getTheme = () => {
+	const theme = localStorage.getItem("theme");
+	theme && setTheme(theme);
+};
+
+getTheme();
