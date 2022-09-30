@@ -64,6 +64,12 @@ header {
 	font-family: "Jost", sans-serif;
 	font-size: 0.9rem;
 	background-color: var(--header);
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	right: 0;
+	left: 0;
+	top: 0;
 }
 
 .logo_heading {
@@ -167,14 +173,16 @@ header {
 	transform: rotate(-135deg);
 }
 
-img.dark, img.light {
+img.dark,
+img.light {
 	transition: all 1000ms ease;
 }
 img.light {
 	display: none;
 }
 
-.mobile-dark, .mobile-light {
+.mobile-dark,
+.mobile-light {
 	z-index: 3;
 }
 
@@ -184,7 +192,6 @@ img.light {
 .dark img.light {
 	display: block;
 }
-
 
 /* footer */
 .footer {
@@ -202,28 +209,29 @@ img.light {
 }
 /* media queries */
 @media screen and (min-width: 768px) {
- header {
+	header {
 		font-family: "Jost", sans-serif;
 		font-size: 1rem;
 		padding: 0 1rem;
 	}
 
-	.dark, .light {
-	cursor: pointer;
-}
+	.dark,
+	.light {
+		cursor: pointer;
+	}
 
-img.light {
-	display: none;
-}
+	img.light {
+		display: none;
+	}
 
-.dark img.dark {
-	display: none;
-	transition: all 1s ease;
-}
-.dark img.light {
-	display: block;
-	transition: all 1s ease;
-}
+	.dark img.dark {
+		display: none;
+		transition: all 1s ease;
+	}
+	.dark img.light {
+		display: block;
+		transition: all 1s ease;
+	}
 
 	.desktop_menu {
 		display: flex;
@@ -236,7 +244,7 @@ img.light {
 
 	.desktop_nav {
 		display: flex;
-        align-items: center;
+		align-items: center;
 		justify-content: flex-end;
 		text-align: right;
 		flex-grow: 1;
@@ -310,28 +318,26 @@ img.light {
 	.mobile_menu {
 		display: none;
 	}
-  .footer p {
-    font-size: 1.25rem;
-  }
+	.footer p {
+		font-size: 1.25rem;
+	}
 }
 @media screen and (min-width: 1024px) {
-header {
+	header {
 		padding: 0;
 	}
 
-  .desktop_menu {
-    width: 95%;
-    margin: auto;
-  }
+	.desktop_menu {
+		width: 95%;
+		margin: auto;
+	}
 
 	.desktop_nav ul a {
 		margin-left: 2rem;
 	}
-
 }
 
 @media screen and (min-width: 1440px) {
-	
 	.desktop_menu {
 		width: 80%;
 	}
