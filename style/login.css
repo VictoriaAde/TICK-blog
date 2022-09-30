@@ -64,8 +64,8 @@ body {
   padding: 1rem 1rem;
   width: 100%;
   margin: 0 auto;
-  border-radius: 0.5em;
-  margin-bottom: 1.2em;
+  border-radius: 0.5rem;
+  margin-bottom: 1.2rem;
   background-color: var(--apple);
   border: none;
 }
@@ -78,11 +78,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1em 1em;
+  padding: 1rem 1rem;
   width: 100%;
   margin: 0 auto;
-  border-radius: 0.5em;
-  margin-bottom: 1.2em;
+  border-radius: 0.5rem;
+  margin-bottom: 1.2rem;
   background-color: var(--google);
   border: none;
 }
@@ -94,11 +94,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1em 1em;
+  padding: 1rem 1rem;
   width: 100%;
   margin: 0 auto;
-  border-radius: 0.5em;
-  margin-bottom: 1.2em;
+  border-radius: 0.5rem;
+  margin-bottom: 1.2rem;
   background-color: var(--github);
   border: none;
 }
@@ -111,11 +111,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1em 1em;
+  padding: 1rem 1rem;
   width: 100%;
   margin: 0 auto;
-  border-radius: 0.5em;
-  margin-bottom: 1.2em;
+  border-radius: 0.5rem;
+  margin-bottom: 1.2rem;
   background-color: var(--twitter);
   border: none;
 }
@@ -132,39 +132,39 @@ body {
 .horizontal__text {
   width: 100%;
   font-weight: 400;
-  font-size: 12.1844px;
+  font-size: 0.761525rem;
   line-height: 140%;
   text-align: center;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03rem;
 }
 
 form {
   color: var(--placeholderText);
   width: 100%;
-  margin-top: 50px;
+  margin-top: 3.125rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 form label {
   display: block;
-  font-size: 12.64px;
+  font-size: 0.79rem;
   font-weight: 500;
   /* letter-spacing: 3.5px; */
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   text-align: left;
-  line-height: 14.09px;
+  line-height: 0.880625rem;
 }
 form .full input {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   border: 1px solid rgba(34, 34, 17, 0.9);
   outline: 0;
-  padding: 16px;
+  padding: 1rem;
   width: 100%;
-  height: 44px;
+  height: 2.75rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 1rem;
   margin-bottom: 2.5rem;
   color: var(--placeholderText);
 }
@@ -180,11 +180,11 @@ form .full input {
   color: var(--placeholderText);
 }
 .buttons .buttons__continue {
-  padding: 1em 1em;
+  padding: 1rem 1rem;
   width: 100%;
   margin: 0 auto;
-  border-radius: 0.5em;
-  margin-bottom: 1em;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
   background-color: var(--accent);
   border: none;
   margin-top: 3rem;
@@ -196,8 +196,8 @@ form .full input {
 .forgot__password a {
   text-decoration: none;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
   color: var(--accent);
 }
 .forgot__password a:hover {
@@ -225,7 +225,7 @@ form .full input {
   margin-right: 0.5rem;
 }
 .form__checkbox--span {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 hr {
   width: 29%;
@@ -233,7 +233,7 @@ hr {
 
 @media screen and (min-width: 426px) and (max-width: 1024px) {
   .container {
-    max-width: 600px;
+    max-width: 37.5rem;
     margin-top: 6rem;
     margin-bottom: 4rem;
   }
@@ -277,12 +277,12 @@ hr {
     color: var(--accentHover);
   }
   form label {
-    font-size: 17px;
+    font-size: 1.0625rem;
   }
   ::placeholder {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .buttons .buttons__continue a {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
