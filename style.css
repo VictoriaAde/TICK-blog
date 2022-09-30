@@ -196,6 +196,9 @@ img.light {
 }
 
 /* main section */
+.container {
+	margin-top: 4.3rem;
+}
 .left-aside-container,
 .right-aside-container {
 	display: none;
