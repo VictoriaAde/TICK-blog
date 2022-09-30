@@ -211,6 +211,11 @@ img.light {
 	background-color: var(--sectionsBg);
 }
 
+.dark .article-nav {
+	
+	border-bottom: 1px solid var(--header);
+}
+
 .article-nav a {
 	margin-right: 1.2rem;
 	padding: 0.5rem;
