@@ -1,0 +1,288 @@
+:root {
+  /* LIGHT MODE  */
+  --bodyText: #222121;
+  --bodyBg: #cccccc;
+  --containerBg: #fff;
+  --accent: #0769db;
+  --accentHover: #3694ff;
+  --btnColor: #fff;
+  --twitter: #2380ee;
+  --google: #f62626;
+  --github: #3b3838;
+  --apple: #000000;
+  --placeholderText: #222121;
+  --whiteText: #ffffff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: var(--bodyText);
+}
+.container {
+  /* margin: 4rem auto; */
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  font-size: 1em;
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: var(--containerBg);
+}
+.container__h2 {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-family: "Oxanium", cursive;
+}
+.container__p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.container__pspan a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.container__pspan a:hover {
+  color: var(--accentHover);
+}
+/* .buttons button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+} */
+.buttons__apple button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  margin-bottom: 1.2em;
+  background-color: var(--apple);
+  border: none;
+}
+.buttons__apple button a {
+  color: var(--whiteText);
+  text-decoration: none;
+}
+
+.buttons__google button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 1em;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  margin-bottom: 1.2em;
+  background-color: var(--google);
+  border: none;
+}
+.buttons__google button a {
+  color: var(--whiteText);
+  text-decoration: none;
+}
+.buttons__github button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 1em;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  margin-bottom: 1.2em;
+  background-color: var(--github);
+  border: none;
+}
+.buttons__github button a {
+  color: var(--whiteText);
+  text-decoration: none;
+}
+
+.buttons__twitter button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 1em;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  margin-bottom: 1.2em;
+  background-color: var(--twitter);
+  border: none;
+}
+.buttons__twitter button a {
+  color: var(--whiteText);
+  text-decoration: none;
+}
+.horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.5rem;
+}
+.horizontal__text {
+  width: 100%;
+  font-weight: 400;
+  font-size: 12.1844px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+form {
+  color: var(--placeholderText);
+  width: 100%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  border-radius: 4px;
+}
+form label {
+  display: block;
+  font-size: 12.64px;
+  font-weight: 500;
+  /* letter-spacing: 3.5px; */
+  margin-bottom: 16px;
+  text-align: left;
+  line-height: 14.09px;
+}
+form .full input {
+  border-radius: 8px;
+  border: 1px solid rgba(34, 34, 17, 0.9);
+  outline: 0;
+  padding: 16px;
+  width: 100%;
+  height: 44px;
+  background: transparent;
+  font-size: 14px;
+  margin-bottom: 2.5rem;
+  color: var(--placeholderText);
+}
+.form__checkbox {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -1.5rem;
+}
+.form__checkbox input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+::placeholder {
+  color: var(--placeholderText);
+}
+.buttons .buttons__continue {
+  padding: 1em 1em;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  background-color: var(--accent);
+  border: none;
+  margin-top: 3rem;
+}
+.buttons .buttons__continue a {
+  color: var(--whiteText);
+  text-decoration: none;
+}
+.forgot__password a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--accent);
+}
+.forgot__password a:hover {
+  color: var(--accentHover);
+}
+
+/* .footer {
+  background-color: #0769db;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1em;
+  text-align: center;
+  padding: 2rem 2rem;
+}
+.footer p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--whiteText);
+} */
+.buttons span img {
+  margin-right: 0.5rem;
+}
+.form__checkbox--span {
+  font-size: 12px;
+}
+hr {
+  width: 29%;
+}
+
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+  .container {
+    max-width: 600px;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
+  hr {
+    width: 70%;
+  }
+  body {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: var(--bodyText);
+    background-color: var(--bodyBg);
+  }
+  .container__pspan a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .container__pspan a:hover {
+    color: var(--accentHover);
+  }
+}
+@media screen and (min-width: 1025px) {
+  .container {
+    max-width: 600px;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
+  hr {
+    width: 70%;
+  }
+  body {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: var(--bodyText);
+    background-color: var(--bodyBg);
+  }
+  .container__pspan a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .container__pspan a:hover {
+    color: var(--accentHover);
+  }
+  form label {
+    font-size: 17px;
+  }
+  ::placeholder {
+    font-size: 14px;
+  }
+  .buttons .buttons__continue a {
+    font-size: 16px;
+  }
+}
