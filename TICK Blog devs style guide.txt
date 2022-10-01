@@ -17,28 +17,27 @@ Body and button text - 1rem/16px
 COLOR THEMES
 
 LIGHT MODE 
---bodyText: '#222121'
---bodyBg: '#ccccccc'
---containerBg: '#fff'
---accent: '#0769db'
---accentHover: '#3694FF'
---btnColor: '#fff'
---twitter: '#2380EE'
---google: '#F62626'
---github: '#3B3838'
---apple: '#000000'
---placeholderText: '#222121'
+--bodyText: #222121;
+	--bodyBg: #cccccc;
+	--sectionsBg: #fff;
+	--accent: #0769db;
+	--accentHover: #3694ff;
+	--btnColor: #fff;
+	--twitter: #2380ee;
+	--google: #f62626;
+	--github: #3b3838;
+	--apple: #000000;
 
-LIGHT MODE 
---bodyText: '#fff'
---bodyBg: '#cccccc'
---containerBg: '#222121'
---accent: '#0769db'
---accentHover: '#3694FF'
---btnColor: '#fff'
---twitter: '#2380EE'
---google: '#F62626'
---github: '#fff'
---apple: '#fff'
+DARK MODE 
+--bodyText: #fff;
+	--bodyBg: #222121;
+	--sectionsBg: #000;
+	--accent: #0769db;
+	--accentHover: #3694ff;
+	--btnColor: #fff;
+	--twitter: #2380ee;
+	--google: #f62626;
+	--github: #3b3838;
+	--apple: #000000;
 --placeholderText: '#fff'
 (github and apple will have the accent color as border color)
