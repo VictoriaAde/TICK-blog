@@ -244,7 +244,7 @@ img.light {
   }
 
   body {
-    background-color: #ccc;
+    background-color: var(--bodyBg);
     padding-top: 8em;
   }
 
