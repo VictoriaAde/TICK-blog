@@ -1,0 +1,122 @@
+:root {
+    /* LIGHT MODE  */
+    --bodyText: #222121;
+    --bodyBg: #cccccc;
+    --containerBg: #fff;
+    --accent: #0769db;
+    --accentHover: #3694ff;
+    --btnColor: #fff;
+    --twitter: #2380ee;
+    --google: #f62626;
+    --github: #3b3838;
+    --apple: #000000;
+    --placeholderText: #222121;
+    --whiteText: #ffffff;
+
+
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    background-color: var(--bodyBg); 
+    padding: 4rem 4rem;
+
+}
+
+.error{
+    padding: 1.5rem 1.5rem;
+    background-color: var(--containerBg);
+}
+
+.error h6 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.error p {
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_home{
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--accent);
+  border: none;
+  margin-top: 2rem;
+}
+
+.btn_home a{
+    color: var(--whiteText);
+    text-decoration: none;
+}
+.ErrorImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 100%;
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+   
+    .error-page p{
+    font-size: 1rem;
+    line-height: 1.7rem;
+    } 
+    
+    .btn_home{
+        text-align: center;
+        padding: 0.5rem 0.5rem;
+        width: 40%;
+        margin: 0 auto;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        background-color: var(--accent);
+        border: none;
+        margin-top: 2rem;
+      }
+
+      img{
+        width: 50%;
+        
+    }
+    
+}
+@media screen and (min-width: 1024px) {
+
+    .error-page p{
+        font-size: 1rem;
+        line-height: 1.7rem;
+        } 
+
+    .btn_home{
+        width: 20%;
+
+    }
+
+    img{
+        width: 50%;
+    }
+}
+
