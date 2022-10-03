@@ -18,7 +18,7 @@
 :root.dark {
 	--bodyText: #fff;
 	--bodyBg: #222121;
-	--sectionsBg: #000;
+	--sectionsBg: #282828;
 	--header: #fff;
 	--accent: #0769db;
 	--accentHover: #3694ff;
@@ -206,7 +206,6 @@ img.light {
 }
 
 .dark .article-nav {
-	
 	border-bottom: 1px solid var(--header);
 }
 
@@ -316,16 +315,23 @@ article {
 }
 
 svg {
-	stroke: var(--bodyText);
 	aspect-ratio: 1/1;
 }
 
-.like, .comment {
-	width: 100%;
+.like,
+.comment {
+	width: 45%;
+}
+
+.like {
+	fill: red;
+	stroke: red;
 }
 
 .save {
-	width: 28%;
+	width: 21%;
+	fill: var(--bodyText);
+	stroke: var(--bodyText);
 }
 
 .article-engagement a:focus {
@@ -393,8 +399,8 @@ svg {
 		padding: 0 1rem;
 	}
 
-	.dark,
-	.light {
+	.dark img,
+	.light img {
 		cursor: pointer;
 	}
 
@@ -531,18 +537,17 @@ svg {
 		margin-right: 2rem;
 	}
 
-	
-.like {
-	width: 25%;
-}
+	.like {
+		width: 23%;
+	}
 
-.comment {
-	width: 11%;
-}
+	.comment {
+		width: 11%;
+	}
 
-.save {
-	width: 16%;
-}
+	.save {
+		width: 16%;
+	}
 	.aside-icon {
 		aspect-ratio: 1/1;
 		width: 8%;
@@ -592,8 +597,17 @@ svg {
 		font-weight: 500;
 	}
 
-	.left-aside__top-content a {
+	.left-aside__top-content-login {
 		font-weight: 600;
+		width: fit-content;
+		margin: auto;
+		padding: 0.2rem;
+		border-bottom: 2px solid var(--accent);
+	}
+
+	.left-aside__top-content-login:hover {
+		color: var(--accent);
+		border-bottom: 2px solid var(--accentHover);
 	}
 
 	.aside-nav {
@@ -628,6 +642,18 @@ svg {
 	}
 	.desktop_nav ul a {
 		margin-left: 2rem;
+	}
+
+	.like {
+		width: 19%;
+	}
+
+	.comment {
+		width: 9%;
+	}
+
+	.save {
+		width: 12%;
 	}
 
 	.left-aside__top-content,
@@ -667,6 +693,14 @@ svg {
 
 	.survey a {
 		color: var(--accent);
+		border-bottom: 2px solid var(--accent);
+		width: fit-content;
+		margin: auto;
+	}
+
+	.survey a:hover {
+		color: var(--accentHover);
+		border-bottom: 2px solid var(--accentHover);
 	}
 
 	.trending {

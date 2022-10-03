@@ -1,5 +1,5 @@
-:root {
-	/* LIGHT MODE  */
+/* :root {
+	
 	--bodyText: #222121;
 	--bodyBg: #cccccc;
 	--sectionsBg: #fff;
@@ -10,9 +10,42 @@
 	--google: #f62626;
 	--github: #3b3838;
 	--apple: #000000;
+} */
+
+:root {
+	/* LIGHT MODE  */
+	--bodyText: #222121;
+	--bodyBg: #cccccc;
+	--sectionsBg: #fff;
+	--header: #fff;
+	--accent: #0769db;
+	--accentHover: #3694ff;
+	--btnColor: #fff;
+	--footer: #2380ee;
+	--footerText: #fff;
+	--twitter: #2380ee;
+	--google: #f62626;
+	--github: #3b3838;
+	--apple: #000000;
 }
 
-.dark-theme {
+:root.dark {
+	--bodyText: #fff;
+	--bodyBg: #222121;
+	--sectionsBg: #282828;
+	--header: #fff;
+	--accent: #0769db;
+	--accentHover: #3694ff;
+	--btnColor: #fff;
+	--footer: #fff;
+	--footerText: #000;
+	--twitter: #2380ee;
+	--google: #f62626;
+	--github: #3b3838;
+	--apple: #000000;
+}
+
+/* .dark-theme {
 	--bodyText: #fff;
 	--bodyBg: #222121;
 	--sectionsBg: #000;
@@ -23,7 +56,7 @@
 	--google: #f62626;
 	--github: #3b3838;
 	--apple: #000000;
-}
+} */
 
 *,
 ::before,
