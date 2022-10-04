@@ -26,23 +26,26 @@ body{
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     background-color: var(--bodyBg); 
-    padding: 4rem 4rem;
+    padding: 2rem 0rem 0rem 0rem; 
+    
 
 }
 
 .error{
     padding: 1.5rem 1.5rem;
-    background-color: var(--containerBg);
+    background-color: var(--containerBg);  
 }
 
 .error h6 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
+    color: var(--placeholderText);
 }
 
 .error p {
     font-size: 0.7rem;
     line-height: 1.5rem;
+    color: var(--placeholderText);
 }
 
 .btn{
@@ -57,10 +60,10 @@ body{
   width: 80%;
   margin: 0 auto;
   border-radius: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
   background-color: var(--accent);
   border: none;
-  margin-top: 2rem;
+  margin-top: 1.8rem;
 }
 
 .btn_home a{
@@ -75,20 +78,36 @@ body{
 
 img{
     width: 100%;
+    margin-bottom: 3rem;
 
 }
 
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-   
-    .error-page p{
-    font-size: 1rem;
+    body{
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        background-color: var(--bodyBg); 
+        padding: 3rem 3rem; 
+        
+    
+    }
+    .error h6 {
+        padding-top: 1rem;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: var(--placeholderText);
+    }
+
+    .error p{
+    font-size: 0.9rem;
     line-height: 1.7rem;
+    color: var(--placeholderText);
     } 
     
     .btn_home{
         text-align: center;
         padding: 0.5rem 0.5rem;
-        width: 40%;
+        width: 30%;
         margin: 0 auto;
         border-radius: 0.5rem;
         margin-bottom: 1rem;
@@ -98,25 +117,44 @@ img{
       }
 
       img{
-        width: 50%;
+        width: 60%;
+        padding-bottom: 2rem;
         
     }
     
 }
 @media screen and (min-width: 1024px) {
 
-    .error-page p{
-        font-size: 1rem;
-        line-height: 1.7rem;
+    body{
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        background-color: var(--bodyBg); 
+        padding: 5rem 5rem; 
+        
+    
+    }
+    .error h6 {
+        padding-top: 1.5rem;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: var(--placeholderText);
+    }
+
+    .error p{
+        font-size: 1.1rem;
+        color: var(--placeholderText);
         } 
 
     .btn_home{
         width: 20%;
+    
 
     }
 
     img{
-        width: 50%;
+        width: 60%;
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
     }
 }
 
