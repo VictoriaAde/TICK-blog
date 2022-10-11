@@ -23,16 +23,11 @@ getTheme();
 // Form validation
 const form = document.querySelector("form");
 const userName = document.getElementById("display-name");
-const email = document.getElementById("email");
+const userName2 = document.getElementById("userName2");
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirm-pwd");
 const errorMsg = document.getElementsByClassName("error-msg");
-
-const isEmailValid = (email) => {
-	const re =
-		/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return re.test(email);
-};
+	
 const isPasswordSecure = (password) => {
 	const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&.*])(?=.{8,})");
 	return re.test(password);
@@ -40,15 +35,13 @@ const isPasswordSecure = (password) => {
 
 form.addEventListener("submit", (e) => {
 	const userNameValue = userName.value.trim();
-	const emailValue = email.value.trim();
+	const userName2Value = userName2.value.trim();
 	const passwordValue = password.value.trim();
 	const confirmPasswordValue = confirmPassword.value.trim();
 
 	// prevent the form from submitting
-	if (userNameValue === "" || emailValue === "" || passwordValue === "" || confirmPasswordValue === "") {
+	if (userNameValue === "" || userName2Value === "" || passwordValue === "" || confirmPasswordValue === "") {
 		e.preventDefault();
-	} else {
-		console.log("works");
 	}
 	// validate the form
 	checkInput();
@@ -72,7 +65,7 @@ function setSuccessFor(input) {
 
 function checkInput() {
 	const userNameValue = userName.value.trim();
-	const emailValue = email.value.trim();
+	const userName2Value = userName2.value.trim();
 	const passwordValue = password.value.trim();
 	const confirmPasswordValue = confirmPassword.value.trim();
 
@@ -82,12 +75,11 @@ function checkInput() {
 		setSuccessFor(userName);
 	}
 
-	if (emailValue === "") {
-		setErrorFor(email, "Please enter your email");
-	} else if (!isEmailValid(emailValue)) {
-		setErrorFor(email, "Please enter a valid email");
-	} else {
-		setSuccessFor(email);
+	if (userName2Value === "") {
+		setErrorFor(userName2, "Please enter your username");
+	} 
+	 else {
+		setSuccessFor(userName2);
 	}
 	if (passwordValue.length < 8) {
 		setErrorFor(password, "Password must be at least 8 characters");
@@ -132,7 +124,7 @@ form.addEventListener(
 			case "display-name":
 				checkInput();
 				break;
-			case "email":
+			case "userName2":
 				checkInput();
 				break;
 			case "password":
@@ -155,4 +147,4 @@ function showPwd() {
 		x.type = "password";
 		eye.src = "images/show-pwd.svg";
 	}
-}
+	};

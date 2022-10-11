@@ -15,7 +15,7 @@
   --header: #fff;
 }
 
-.dark-theme {
+body.dark {
   --bodyText: #fff;
   --bodyBg: #222121;
   --sectionsBg: #000;
@@ -55,7 +55,6 @@ a {
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--bodyBg);
-  color: var(--bodyText);
 }
 
 li {
@@ -218,8 +217,8 @@ img.light {
     padding: 0 1rem;
   }
 
-  .dark,
-  .light {
+  .dark img,
+  .light img {
     cursor: pointer;
   }
 
@@ -288,6 +287,8 @@ img.light {
     align-items: center;
     width: 60%;
   }
+
+  
 
   .search-btn {
     display: flex;

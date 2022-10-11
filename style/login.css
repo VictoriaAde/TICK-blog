@@ -21,10 +21,8 @@
 body {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  color: var(--bodyText);
 }
 .container {
-  /* margin: 4rem auto; */
   margin-top: 4rem;
   margin-left: auto;
   margin-right: auto;
@@ -244,7 +242,6 @@ hr {
   body {
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    color: var(--bodyText);
     background-color: var(--bodyBg);
   }
   .container__pspan a {
@@ -267,7 +264,6 @@ hr {
   body {
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    color: var(--bodyText);
     background-color: var(--bodyBg);
   }
   .container__pspan a {
