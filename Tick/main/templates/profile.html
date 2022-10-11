@@ -1,0 +1,10 @@
+{% extends 'global.html' %}
+
+{% block content %}
+        <form  class="form-control" method="Post">
+            <h1 align="center">Upload Profile Picture</h1>
+            {% csrf_token %}
+            {{form.as_p}}<br/><br/><br/><br/><br/><br/>
+            <button class="btn btn-primary">Post</button>    
+        
+{% endblock %}
