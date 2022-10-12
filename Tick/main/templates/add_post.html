@@ -1,0 +1,30 @@
+{% extends 'global.html' %}
+
+{% block content %}
+
+        <form  class="form-control" method="Post">
+            <h1 align="center">Create New Post</h1>
+            {% csrf_token %}
+            {{form.as_p}}
+            {{form.media}}
+            <button class="btn btn-primary">Post</button>    
+       <script> 
+        var name="{{user.username}}";
+        document.getElementById("author")
+            =name;
+       </script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
