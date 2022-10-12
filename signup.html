@@ -1,34 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp Page</title>
-    <link rel="stylesheet" href="signup.css">
-</head>
-<body>
-    
-    <div  class="container">
-            <h1> Welcome to JP blog Community</h1>
-            <p> <span> Jp blog community </span> Jp blog community is a community of amazing developers across the globe </p>
-            <br><br>
-            <form action="signup page">
-            <label for="display name"><b>Choose a display name </b></label>
-            <input type="text" placeholder="This will be displayed to the reader on your blog" name="display name" required>
-    
-            <label for="display name"><b>Email address </b></label>
-            <input type="text" placeholder="Enter email address" name="display name" required>
-    
-            <label for="display name"><b>Create password </b></label>
-            <input type="text" placeholder="Enter password" name="display name" required>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect"
+            href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Jost:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+            />
+        <link rel="stylesheet" href="signup.css">
+        <script src="script.js" defer></script>
+        <title>SignUp Page</title>
+    </head>
+    <body>
+        <header>
+            <!-- desktop menu -->
+            <div class="desktop_menu">
+                <div class="desktop_menu-rside">
+                    <div>
+                        <a href="index.html" class="logo_heading">Tick</a>
+                    </div>
+                    <div class="search_box">
+                        <input type="search" placeholder="Search.." />
+                        <button class="search-btn"></button>
+                    </div>
+                </div>
+                <nav class="desktop_nav">
+                    <img class="dark" onclick="setTheme('dark')" style="width: 5.3%;" src="toggle.svg"
+                        alt="dark mode icon">
+                    <img onclick="setTheme('light')" class="light" style="width: 5.3%;" src="toggle.svg"
+                        alt="light mode icon">
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="signup.html" class="create_acct_btn">Create account</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- mobile menu -->
+            <div class="mobile_menu">
+                <div>
+                    <a href="index.html" class="logo_heading">Tick</a>
+                </div>
+                <img class="dark mobile-dark" onclick="setTheme('dark')" style="width: 6%;" src="toggle.svg"
+                    alt="dark mode icon">
+                <img onclick="setTheme('light')" class="light mobile-light" style="width: 6%;" src="toggle.svg"
+                    alt="light mode icon">
 
-    <div class="btn">
-        <button type="submit">Sign up</button>
-        
-    </div>
-           
-    </div>
-</form>   
-</body>
+                <div class="menu_hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="mobile_nav">
+
+                    <ul>
+                        <li><a href="index.html"><img class="nav-icon" src="Images/mobile/home.svg" alt="Home icon">
+                                Home</a></li>
+                        <li><a href="#"><img class="nav-icon" src="Images/mobile/listing.svg" alt="Listings icon">Listings</a></li>
+                        <li><a href="#"><img class="nav-icon" src="Images/mobile/podcast.svg" alt="Podcasts icon">
+                                Podcasts</a></li>
+                        <li><a href="#"><img class="nav-icon" src="Images/mobile/videos.svg" alt="Videos icon"> Videos</a></li>
+                        <li><a href="#"><img class="nav-icon" src="Images/mobile/FAQ.svg" alt="FAQ icon"> FAQ</a></li>
+                        <li><a href="./t&c.html"><img class="nav-icon" src="Images/mobile/terms.svg" alt="Terms of use
+                                    icon">
+                                Terms of use</a></li>
+                        <li><a href="./privacy.html"><img class="nav-icon" src="Images/mobile/privacy.svg" alt="Privacy
+                                    policy icon">
+                                Privacy Policy</a></li>
+                        <li><a href="contact.html"><img class="nav-icon" src="Images/mobile/contact-us.svg"
+                                    alt="Contact-us icon">
+                                Contact us</a></li>
+                        <li><a href="about.html"><img class="nav-icon" src="Images/mobile/about-us.svg" alt="About-us
+                                    icon">
+                                About us</a></li>
+                        <li><a href="login.html"><img class="nav-icon" src="Images/mobile/login.svg" alt="Login icon">
+                                Login</a></li>
+                        <li><a href="signup.html"><img class="nav-icon" src="Images/mobile/write.svg" alt="Write-for-us
+                                    icon">
+                                Write for us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="wrapper">
+
+            <div class="container">
+                <h1> Welcome to Tick blog</h1>
+                <p class="subtitle">Tick blog is a community of amazing developers across the globe </p>
+
+                <div class="buttons">
+                    <div class="buttons__apple">
+                        <button>
+                            <a href="#">
+                                <img src="images/XMLID_229_ (2).png" />
+                                <span> continue with
+                                    apple</span></a>
+                        </button>
+                    </div>
+                    <div class="buttons__google">
+                        <button>
+                            <a href="#">
+                                <img src="images/Shape (1).png" />
+                                <span>continue with
+                                    Google</span>
+                            </a>
+                        </button>
+                    </div>
+                    <div class="buttons__github">
+                        <button>
+                            <a href="#">
+                                <img src="images/Vector (7).png" />
+                                <span>continue with
+                                    Github</span></a>
+                        </button>
+                    </div>
+                    <div class="buttons__twitter">
+                        <button>
+                            <a href="#"><img src="images/Vector (6).png" /><span>continue with Twitter</span></a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="horizontal">
+                    <hr />
+                    <p class="horizontal__text">sign up with username</p>
+                    <hr />
+                </div>
+
+                <form action='#' method="post">
+                    <div class="form-input">
+                        <label for="display-name">Full Name</label>
+                        <input type="text" placeholder="Enter Full Name"
+                            id="display-name">
+                        <span class="error-msg"></span>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="email">Username</label>
+                        <input type="text" placeholder="This will be displayed to your readers" id="userName2">
+                        <span class="error-msg"></span>
+                    </div>
+
+                    <div class="form-input password">
+                        <label for="password">Create password</label>
+                        <input type="password" placeholder="Enter password" id="password">
+                        <img id="eye" onclick="showPwd()" src="images/show-pwd.svg" alt="show password"
+                            width="18px">
+                        <span class="error-msg"></span>
+                    </div>
+                    <div class="form-input">
+                        <label for="confirm-pwd">Confirm password</label>
+                        <input type="password" placeholder="Confirm your password" id="confirm-pwd"
+                            aria-live="polite">
+                        <span class="error-msg"></span>
+                    </div>
+                    <div class="btn">
+                        <input type="submit" value="Submit">
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </body>
+    <footer class="footer">
+        <p>
+            Tick — A space where techies can interact with like minds and share ideas.
+        </p>
+        <p>
+            Built with HTML, Vanilla CSS and Javascript.
+        </p>
+        <p>Made by Team8 - Tick. JP Community &copy; 2022.</p>
+    </footer>
 </html>

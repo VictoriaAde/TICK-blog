@@ -29,7 +29,7 @@
 	--apple: #000000;
 }
 
-:root.dark {
+:body.dark {
 	--bodyText: #fff;
 	--bodyBg: #222121;
 	--sectionsBg: #282828;
