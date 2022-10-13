@@ -5,6 +5,11 @@
             <h1 align="center">Upload Profile Picture</h1>
             {% csrf_token %}
             {{form.as_p}}<br/><br/><br/><br/><br/><br/>
-            <button class="btn btn-primary">Post</button>    
+            <button class="btn btn-primary">Post</button>  
+            <script> 
+                var name="{{user.username}}";
+                document.getElementById("author").placeholder
+                    =name;
+            </script>  
         
 {% endblock %}

@@ -12,5 +12,5 @@ urlpatterns = [
     path('detail/update/<int:pk>',UpdatePost.as_view(), name="update"),
     path('detail/<int:pk>/Delete',DeletePost.as_view(), name="Delete"),
     path('profile/',ProfileView, name='profile'),
-    path('details/<int:pk>/comment', CommentPost.as_view(), name='add_comment'),
+    path('details/<int:pk>/comment', CommentPost.as_view(), name="add_comment"),
 ]

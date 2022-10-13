@@ -161,14 +161,14 @@
                     {% for post in object_list %}
                     <article>
                         
-                    
+            
                         
                         <div class="author-details">
-                            <div class="article__left-side"><img class="article-img" src="{{post.Author.object.picture.Profile_pic.url}}"
+                            <div class="article__left-side"><img class="article-img" src="{{user.picture.Profile_pic.url}}"
                                     alt="author's picture'">
                             </div>
                             <div class="article__author-name-date">
-                                <a href="" class="author-name">{{post.Author}}</a>
+                                <a href="" class="author-name"><strong>{{post.Author}}</strong></a>
                                 
                             </div>
                         </div>

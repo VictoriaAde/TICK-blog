@@ -115,7 +115,7 @@
        {% if not object.comment.all %}
 
        No comment Yet...
-       {% comment %} <a href ="{% url 'main:add_comment' post.pk %}">Add One</a> {% endcomment %}
+       <a href="{% url 'main:add_comment' object.pk %}"><button>Add Comment</button></a>
 
        {% else %}
 
@@ -127,7 +127,7 @@
        {{comment.body}}</br></br>
        {% endfor %}
     
-       {% comment %} <a href ="{% url 'main:add_comment' post.pk %}">Add One</a> {% endcomment %}
+       <a href="{% url 'main:add_comment' object.pk %}"><button>Add Comment</button></a>
        {% endif %}
                 
         </div>
