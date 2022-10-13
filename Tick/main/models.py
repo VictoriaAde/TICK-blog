@@ -1,9 +1,11 @@
 from distutils.command.upload import upload
 from email.mime import image
+from typing_extensions import Required
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from ckeditor.fields import RichTextField
+from pkg_resources import require
 
 
 class BlogPost(models.Model):
@@ -26,7 +28,7 @@ class Profile(models.Model):
         return str(self.user)
 
 class Comment_post(models.Model):
-    post = models.ForeignKey(User, related_name ='comment',on_delete=models.CASCADE,)
+    post = models.ForeignKey(BlogPost, related_name ='comment',on_delete=models.CASCADE,)
     name=models.CharField(max_length=255)
     body=  models.TextField()
     date_added= models.DateTimeField(auto_now_add=True)
