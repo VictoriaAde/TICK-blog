@@ -1,0 +1,236 @@
+{% load staic %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Jost:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="contact.css" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <header>
+      <!-- desktop menu -->
+      <div class="desktop_menu">
+        <div class="desktop_menu-rside">
+          <div>
+            <a href="{% url 'main:home' %}" class="logo_heading">Tick</a>
+          </div>
+          {% comment %} <div class="search_box">
+            <input type="search" placeholder="Search.." />
+            <button class="search-btn"></button>
+          </div> {% endcomment %}
+        </div>
+        <nav class="desktop_nav">
+          <img
+            class="dark"
+            onclick="setTheme('dark')"
+            style="width: 3%"
+            src="{% static 'Images/toggle.svg' %}"
+            alt="dark mode icon"
+          />
+          <img
+            onclick="setTheme('light')"
+            class="light"
+            style="width: 3%"
+            src="{% static 'Images/toggle.svg' %}"
+            alt="light mode icon"
+          />
+          <ul>
+            <li><a href="login">Login</a></li>
+            <li><a href="#" class="create_acct_btn">Create account</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- mobile menu -->
+      <div class="mobile_menu">
+        <div>
+          <a href="index.html" class="logo_heading">Tick</a>
+        </div>
+        <img
+          class="dark mobile-dark"
+          onclick="setTheme('dark')"
+          style="width: 6%"
+          src="toggle.svg"
+          alt="dark mode icon"
+        />
+        <img
+          onclick="setTheme('light')"
+          class="light mobile-light"
+          style="width: 6%"
+          src="toggle.svg"
+          alt="light mode icon"
+        />
+
+        <div class="menu_hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="mobile_nav">
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  class="nav-icon"
+                  src="Images/mobile/home.svg"
+                  alt="Home icon"
+                />
+                Home</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="nav-icon"
+                  src="Images/mobile/listing.svg"
+                  alt="Listings icon"
+                />Listings</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="nav-icon"
+                  src="Images/mobile/podcast.svg"
+                  alt="Podcasts icon"
+                />
+                Podcasts</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="nav-icon"
+                  src="Images/mobile/videos.svg"
+                  alt="Videos icon"
+                />
+                Videos</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="nav-icon"
+                  src="Images/mobile/FAQ.svg"
+                  alt="FAQ icon"
+                />
+                FAQ</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="nav-icon"
+                  src="Images/mobile/terms.svg"
+                  alt="Terms of use icon"
+                />
+                Terms of use</a
+              >
+            </li>
+            <li>
+              <a href="./privacy.html"
+                ><img
+                  class="nav-icon"
+                  src="Images/mobile/privacy.svg"
+                  alt="Privacy policy icon"
+                />
+                Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="nav-icon"
+                  src="Images/mobile/contact-us.svg"
+                  alt="Contact-us icon"
+                />
+                Contact us</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="nav-icon"
+                  src="Images/mobile/about-us.svg"
+                  alt="About-us icon"
+                />
+                About us</a
+              >
+            </li>
+            <li>
+              <a href="login.html"
+                ><img
+                  class="nav-icon"
+                  src="Images/mobile/login.svg"
+                  alt="Login icon"
+                />
+                Login</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="nav-icon"
+                  src="Images/mobile/write.svg"
+                  alt="Write-for-us icon"
+                />
+                Write for us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <h2>Contact Us</h2>
+      <h4>Tick-blog will love to hear from you!</h4><br>
+      <div class="table">
+        <div class="form-div">
+          <h4 class="mg">Send us a message</h4><br><br><br>
+          <form action="" class="">
+            <div class="main_div1">
+            <label class="bl" for="name">First name</label>
+            <input type="text" class="name">
+            <label class="bl" for="name">Last Name</label>
+            <input type="email" class="name">
+            <label class="bl" for="">Phone</label>
+            <input type="text">
+            <label class="bl" for="">Email</label>
+            <input type="email">
+          </div><br><br>
+          <input type="Textarea">
+          
+            
+          </form>
+
+        </div>
+        <div class="contact-div">
+          <h4 class="mg2">Contact information</h4><br><br><br><br><b><br></b>
+          <hr><br><br><br><br>
+          <hr>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>
+          Tick — A space where techies can interact with like minds and share ideas.
+      </p>
+      <p>
+          Built with HTML, Vanilla CSS and Javascript.
+      </p>
+      <p>Made by Team8 - Tick. JP Community &copy; 2022.</p>
+  </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

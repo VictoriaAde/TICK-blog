@@ -1,0 +1,282 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Jost:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+            />
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+        <script src="{% static 'javascripts/script.js' %}" defer></script>
+        <title>Tick-Blog</title>
+    </head>
+    <body>
+        <header>
+            <!-- desktop menu -->
+            <div class="desktop_menu">
+                <div class="desktop_menu-rside">
+                    <div>
+                        <a href="{% url 'main:home' %}" class="logo_heading">Tick</a>
+                    </div>
+                    <div class="search_box">
+                        <input type="search" placeholder="Search.." />
+                        <button class="search-btn"></button>
+                    </div>
+                </div>
+                <nav class="desktop_nav">
+                    <img class="dark" onclick="setTheme('dark')" style="width: 5.3%;" src="{% static 'Images/toggle.svg' %}"
+                        alt="dark mode icon">
+                    <img onclick="setTheme('light')" class="light" style="width: 5.3%;" src="{% static 'Images/toggle.svg' %}"
+                        alt="light mode icon">
+        
+                        {% if user.is_authenticated %}
+                            
+                        <ul>
+                            <li>
+                              <a href="#">welcome, {{user.username}}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'main:create' %}">Add Post</a>
+                              </li>
+                              
+                            <li>
+                                <a href="{% url 'main:profile' %}">Add profile Picture </a>
+                              </li>
+                            <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
+                            </ul>
+                            
+                            {% else %}
+                            
+                            <li><a href="{% url 'accounts:login' %}" class="create_acct_btn">Login</a></li>
+                            <li><a href="{% url 'accounts:signUp' %}" class="create_acct_btn">Create account</a></li> 
+                            </ul>
+                        {% endif %}
+
+                </nav>
+            </div>
+            <!-- mobile menu -->
+            <div class="mobile_menu">
+                <div>
+                    <a href="{% url 'main:home' %}" class="logo_heading">Tick</a>
+                </div>
+                <img class="dark mobile-dark" onclick="setTheme('dark')" style="width: 6%;" src="{% static 'images/toggle.svg' %}"
+                    alt="dark mode icon">
+                <img onclick="setTheme('light')" class="light mobile-light" style="width: 6%;" src="{% static 'images/toggle.svg' %}"
+                    alt="light mode icon">
+                    
+
+
+                <div class="menu_hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="mobile_nav">
+
+                    <ul>
+                        <li><a href="index.html"><img class="nav-icon" src="{% static 'Images/mobile/home.svg' %}" alt="Home icon">
+                                Home</a></li>
+                        <li><a href="#"><img class="nav-icon" src="{% static 'Images/mobile/listing.svg' %}" alt="Listings icon">Listings</a></li>
+                        <li><a href="#"><img class="nav-icon" src="{% static 'Images/mobile/podcast.svg' %}" alt="Podcasts icon">
+                                Podcasts</a></li>
+                        <li><a href="#"><img class="nav-icon" src="{% static 'Images/mobile/videos.svg' %}" alt="Videos icon"> Videos</a></li>
+                        <li><a href="#"><img class="nav-icon" src="{% static 'Images/mobile/FAQ.svg' %}" alt="FAQ icon"> FAQ</a></li>
+                        <li><a href="./t&c.html"><img class="nav-icon" src="{% static 'Images/mobile/terms.svg' %}" alt="Terms of use
+                                    icon">
+                                Terms of use</a></li>
+                        <li><a href="./privacy.html"><img class="nav-icon" src="{% static 'Images/mobile/privacy.svg' %}" alt="Privacy
+                                    policy icon">
+                                Privacy Policy</a></li>
+                        <li><a href="contact.html"><img class="nav-icon" src="{% static 'Images/mobile/contact-us.svg' %}" alt="Contact-us icon">
+                                Contact us</a></li>
+                        <li><a href="about.html"><img class="nav-icon" src="{% static 'Images/mobile/about-us.svg' %}" alt="About-us icon">
+                                About us</a></li>
+                        <li><a href="login.html"><img class="nav-icon" src="{% static 'Images/mobile/login.svg' %}" alt="Login icon">
+                                Login</a></li>
+                        <li><a href="signup.html"><img class="nav-icon" src="{% static 'Images/mobile/write.svg' %}" alt="Write-for-us
+                                    icon">
+                                Write for us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <aside class="left-aside-container">
+                <div class="left-aside__top-content">
+                    
+                    {% if user.is_authenticated %}
+                    <p>Welcome to TICK blog. We are a community of coders across the globe.</p>
+                    
+                    {% else %}
+                    <p>Welcome to TICK blog. We are a community of coders across the globe.</p>
+                    
+                    <button class="create-acct-btn" ><a href="{% url 'accounts:signUp' %}" >Create Account</a></button>
+                    <a href="{% url 'accounts:login' %}">Login</a>
+
+                    {% endif %}
+                </div>
+
+                <div class="aside-nav">
+                    <ul class="left-aside__nav-links">
+                        <li><a href="index.html"><img class="aside-icon" src="{% static 'Images/desktop/home.svg' %}" alt="Home icon">
+                                Home</a></li>
+                        <li><a href="#"><img class="aside-icon" src="{% static 'Images/desktop/listing.svg' %}" alt="Listings icon">
+                                Listings</a></li>
+                        <li><a href="#"><img class="aside-icon" src="{% static 'Images/desktop/podcast.svg' %}" alt="Podcasts icon">
+                                Podcasts</a></li>
+                        <li><a href="#"><img class="aside-icon" src="{% static 'Images/desktop/videos.svg' %}" alt="Videos icon">
+                                Videos</a></li>
+                        <li><a href="#"><img class="aside-icon" src="{% static 'Images/desktop/FAQ.svg' %}" alt="FAQ icon"> FAQ</a></li>
+                        <li><a href=""><img class="aside-icon" src="{% static 'Images/desktop/terms.svg' %}" alt="Terms of
+                                    use icon">
+                                Terms of
+                                use</a></li>
+                        <li><a href=""><img class="aside-icon" src="{% static 'Images/desktop/privacy.svg' %}"
+                                    alt="Privacy policy
+                                    icon">
+                                Privacy Policy</a></li>
+                        <li><a href="contact.html"><img class="aside-icon" src="{% static 'Images/desktop/contact-us.svg' %}" alt="Contact-us
+                                    icon">
+                                Contact us</a></li>
+                        <li><a href="about.html"><img class="aside-icon" src="{% static 'Images/desktop/about-us.svg' %}" alt="About-us icon">
+                                About us</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <main>
+                <div class="main-container">
+                    <div class="article-nav">
+                        <a class="article-nav__active" href="#">Relevant</a>
+                        <a href="#">Latest</a>
+                        <a href="#">Top</a>
+                    </div>
+                    {% for post in object_list %}
+                    <article>
+                        
+            
+                        
+                        <div class="author-details">
+                            <div class="article__left-side"><img class="article-img" src="{{user.picture.Profile_pic.url}}"
+                                    alt="author's picture'">
+                            </div>
+                            <div class="article__author-name-date">
+                                <a href="" class="author-name"><strong>{{post.Author}}</strong></a>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="article-title">
+                            <a href="{% url 'main:details' post.pk %}" class="article-heading">{{post.Title}}</a>
+                            <div class="article-tags">
+                                {% if user.id == post.Author.id %} 
+                               <a href="{% url 'main:update' post.pk %}"><strong>Edit Post</strong></a>
+                               <a href="{% url 'main:Delete' post.pk %}"><strong>Delete Post</strong></a>
+                               {% endif%}
+                               <p class="date">Last Update:<strong>{{post.Date_Created}}</strong></p>
+                               
+                        </div>
+                        <div class="article-engagement">
+                            <div class="left__article-engagement">
+                                <a href=""><svg class="like" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0
+                                        24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21
+                                            8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312
+                                            2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12
+                                            9 12s9-4.78 9-12z" />
+                                        </svg><span
+                                            class="mobile-engagement-details">2</span><span
+                                            class="desktop-engagement-details">2 likes</span></a>
+
+                                    <a href="">
+                                        <svg class="comment" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0
+                                            24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9
+                                                3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293
+                                                3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501
+                                                48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626
+                                                2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012
+                                                3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
+                                                />
+                                            </svg>
+                                            <span
+                                                class="mobile-engagement-details">4</span><span
+                                                class="desktop-engagement-details">4 comments</span></a>
+                                    </div>
+                                    <p class="read-time"></p>
+                                    <a href="" class="right__article-engagement"><svg class="save"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--twitter)"
+                                            class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.593
+                                                3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5
+                                                21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                                            </svg></a href="">
+                                    </div>
+                                </article>
+                                {% endfor %}
+                               
+                            </div>
+                        </main>
+                        <aside class="right-aside-container">
+                            <div class="survey">
+                                <div><img loading="lazy" src="{% static 'Images/laptop.png' %}"
+                                        alt=""></div>
+                                <p>Tell us your thoughts about Tick blog</p>
+                                <a href="">Take a quick survey</a>
+                            </div>
+                            <div class="trending">
+                                <a href="">HASHTAG</a>
+                                <div class="trending__text-content">
+                                    <a href="">What was your win this week?</a>
+                                    <a href="">42 comments</a>
+                                </div>
+                                <div class="trending__text-content">
+                                    <a href="">What was your win this week?</a>
+                                    <a href="">42 comments</a>
+                                </div>
+                                <div class="trending__text-content">
+                                    <a href="">What was your win this week?</a>
+                                    <a href="">42 comments</a>
+                                </div>
+                                <div class="trending__text-content">
+                                    <a href="">What was your win this week?</a>
+                                    <a href="">42 comments</a>
+                                </div>
+                                <div class="trending__text-content">
+                                    <a href="">What was your win this week?</a>
+                                    <a href="">42 comments</a>
+                                </div>
+                                <div class="trending__text-content">
+                                    <a href="">What was your win this week?</a>
+                                    <a href="">42 comments</a>
+                                </div>
+                                <div class="trending__text-content">
+                                    <a href="">What was your win this week?</a>
+                                    <a href="">42 comments</a>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <footer class="footer">
+                        <p>
+                            Tick — A space where techies can interact with like
+                            minds
+                            and share ideas.
+                        </p>
+                        <p>
+                            Built with HTML, Vanilla CSS and Javascript.
+                        </p>
+                        <p>Made by Team8 - Tick. JP Community &copy; 2022.</p>
+                    </footer>
+                </body>
+            </html>
