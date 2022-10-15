@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONTS LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Jost:wght@500;700&family=Oxanium:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- script -->
+    <script src="script.js" defer></script>
+
+    <!-- link -->
+    <link rel="stylesheet" href="ng.css" />
+    <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon" />
+
+    <title>Contact Us</title>
+  </head>
+  <body>
+   <header>
+            <!-- desktop menu -->
+            <div class="desktop_menu">
+                <div class="desktop_menu-rside">
+                    <div>
+                        <a href="index.html" class="logo_heading">Tick</a>
+                    </div>
+                    <div class="search_box">
+                        <input type="search" placeholder="Search.." />
+                        <button class="search-btn"></button>
+                    </div>
+                </div>
+                <nav class="desktop_nav">
+                    <img  class="dark" onclick="setTheme('dark')" style="width: 3%;" src="toggle.svg"
+                        alt="dark mode icon">
+                    <img onclick="setTheme('light')" class="light" style="width: 3%;" src="toggle.svg"
+                        alt="light mode icon">
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="signup.html" class="create_acct_btn">Create account</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- mobile menu -->
+            <div class="mobile_menu">
+                <div>
+                    <a href="index.html" class="logo_heading">Tick</a>
+                </div>
+                <img  class="dark mobile-dark" onclick="setTheme('dark')" style="width: 6%;" src="toggle.svg"
+                        alt="dark mode icon">
+                    <img onclick="setTheme('light')" class="light mobile-light" style="width: 6%;" src="toggle.svg"
+                    alt="light mode icon">
+
+                <div class="menu_hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="mobile_nav">
+
+                    <ul>
+                        <li><a href="index.html"><img class="nav-icon" src="Images/mobile/home.svg" alt="Home icon"> Home</a></li>
+                        <li><a href="#"><img class="nav-icon" src="Images/mobile/listing.svg" alt="Listings icon">Listings</a></li>
+                        <li><a href="#"><img class="nav-icon" src="Images/mobile/podcast.svg" alt="Podcasts icon">
+                                Podcasts</a></li>
+                        <li><a href="#"><img class="nav-icon" src="Images/mobile/videos.svg" alt="Videos icon"> Videos</a></li>
+                        <li><a href="#"><img class="nav-icon" src="Images/mobile/FAQ.svg" alt="FAQ icon"> FAQ</a></li>
+                        <li><a href="t&c.html"><img class="nav-icon" src="Images/mobile/terms.svg" alt="Terms of use icon">
+                                Terms of use</a></li>
+                        <li><a href="privacy.html"><img class="nav-icon" src="Images/mobile/privacy.svg" alt="Privacy policy icon">
+                                Privacy Policy</a></li>
+                        <li><a href="#"><img class="nav-icon" src="Images/mobile/contact-us.svg" alt="Contact-us icon">
+                                Contact us</a></li>
+                        <li><a href="about.html"><img class="nav-icon" src="Images/mobile/about-us.svg" alt="About-us icon">
+                                About us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <main>
+
+            <div class="main_container">
+                <div class=text>
+                    <h2>Contact us</h2>
+                    <strong><p>Tick Blog want to hear from you !</strong></p>
+            
+                </div>
+                <div class="container">
+                    <div class="left_side">
+                        <h3>Send us a message</h3>
+                        <form>
+                            <div class="form_one">
+                                <div class="full">
+                                    <label for="full name">Full name</label>
+                                    <input type="text" placeholder="Type your Full name" required>
+                                </div>
+
+                                <div class="full">
+                                    <label for="email">Email</label>
+                                    <input type="email" placeholder="Type your Email" required>
+                                </div>
+                            </div>
+
+                            <div class="form_two">
+
+                                <div class="full">
+                                    <label for="phone">Phone</label>
+                                    <input type="number" placeholder="type your number" required>
+                                </div>
+
+                                <!-- <div class="hidden">
+                                    <label for="phone">Phone</label>
+                                    <input type="number" placeholder="type your number" required>
+                                </div> -->
+
+                                <div class="message">
+                                    <label for="message">Message</label>
+                                    <input type="text" placeholder="Type your message" required>
+                                </div>
+                            </div>
+
+                            <div class="message_hidden ">
+                                <label for="message">Message</label>
+                                <input type="text" placeholder="Type your message" required>
+                            </div>
+
+
+                            <div class="buttons">
+                                <button class="buttons__continue"><a href="#">Submit</a></button>
+                            </div>
+                    
+                        
+                        </form>
+
+                        
+
+                    </div>
+
+                    <div class="right_side">
+                        <h3>Contact information</h3>
+                        <hr>
+
+                        <div class="phone">
+                            <img src="images/contact phone.svg">
+                            <p>+ 234 90 217 936</p>
+                        </div>
+    
+                        <div class="phone">
+                            <img src="images/email.svg">
+                            <p>jpblog@yahoo.com</p>
+                        </div>
+                        <hr>
+    
+                        <div class="phone">
+                            <img src="images/contact twitter.svg">
+                            <p>@jpblog_community</p>
+                        </div>
+    
+                        <div class="phone">
+                            <img src="images/instagram.svg">
+                            <p>jpblog_community</p>
+                        </div>
+    
+                        <div class="phone">
+                            <img src="images/facebook.svg">
+                            <p>jpblog_community</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+           
+        </main>
+
+    <footer class="footer">
+      <p>
+        Tick — A space where techies can interact with like minds and share ideas.
+      </p>
+      <p>
+        Built with HTML, Vanilla CSS and Javascript.
+      </p>
+      <p>Made by Team8 - Tick. JP Community &copy; 2022.</p>
+    </footer>
+  </body>
+</html>
+ 
+        
+
+
+    
+        
+
+       
+   
